@@ -1,24 +1,30 @@
 <div class='container'>
   <mat-form-field>
-    <input id="num" value="{{valor}}" matInput type="text" disabled>
+    <input id="num" value="{{ temp ? segundoValor : valor }}" matInput type="text" disabled>
   </mat-form-field>
 
   <div>
     <button mat-flat-button (click)="setNum('1')">1</button>
     <button mat-flat-button (click)="setNum('2')">2</button>
     <button mat-flat-button (click)="setNum('3')">3</button>
+    <button mat-flat-button (click)="setOperate('+')">+</button>
   </div>
   <div>
     <button mat-flat-button (click)="setNum('4')">4</button>
     <button mat-flat-button (click)="setNum('5')">5</button>
     <button mat-flat-button (click)="setNum('6')">6</button>
+    <button mat-flat-button (click)="setOperate('-')">-</button>
   </div>
   <div>
     <button mat-flat-button (click)="setNum('7')">7</button>
     <button mat-flat-button (click)="setNum('8')">8</button>
     <button mat-flat-button (click)="setNum('9')">9</button>
+    <button mat-flat-button (click)="setOperate('*')">*</button>
   </div>
   <div>
+    <button mat-flat-button (click)="setNum('.')">.</button>
     <button mat-flat-button (click)="setNum('0')">0</button>
+    <button mat-flat-button (click)="getResult()">=</button>
+    <button mat-flat-button (click)="setOperate('/')">/</button>
   </div>
 </div>
